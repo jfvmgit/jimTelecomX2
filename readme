@@ -1,71 +1,70 @@
-TelecomX Churn Prediction Project
+TelecomX Churn Prediction Project (Parte 2)
 Descripción
-Este repositorio contiene el código y análisis para un proyecto de Machine Learning diseñado para predecir la probabilidad de que los clientes de TelecomX cancelen sus servicios (churn). El objetivo es desarrollar un pipeline robusto que incluya preparación de datos, entrenamiento de modelos, evaluación de rendimiento y una conclusión estratégica basada en los resultados.
-El proyecto utiliza datos reales de clientes de telecomunicaciones, procesados y analizados paso a paso para identificar patrones de churn y proponer soluciones prácticas.
-Características
+Este proyecto es la segunda parte del desafío del programa Alura ONE, continuando el análisis de evasión de clientes (churn) para TelecomX. Basado en el trabajo previo de ETL y EDA, ahora el objetivo es usar Machine Learning para predecir qué clientes tienen más probabilidad de cancelar sus servicios y dar recomendaciones estratégicas.
+🎯 Objetivo del proyectoUsar los datos tratados para:
 
-Preparación de datos: Limpieza, codificación de variables categóricas y estandarización.
-Modelos predictivos: Logistic Regression y Random Forest para clasificación.
-Evaluación: Métricas como Accuracy, Precision, Recall, F1 y ROC-AUC.
-Visualización: Gráficos de correlación y comparación de modelos.
-Conclusión estratégica: Recomendaciones basadas en la importancia de variables.
+Preparar datos para modelado (codificación, normalización).
+Entrenar y evaluar modelos predictivos.
+Identificar variables importantes para el churn.
+Proponer estrategias de retención.
 
-Requisitos
+📂 Estructura del repositorio
 
-Python 3.x
-Bibliotecas:
-pandas
-scikit-learn
-matplotlib
-seaborn (opcional para visualizaciones avanzadas)
+TelecomX_Data.json → Datos originales en formato JSON.
+TelecomX_diccionario.md → Descripción de cada variable del dataset.
+TelecomX_LATAM.ipynb → Notebook con el análisis anterior y la nueva parte de ML.
+README.md → Este documento.
+(Opcional) TelecomX_ML.ipynb → Nuevo notebook para el modelado (si lo separas).
+
+🔄 Flujo de trabajo
+Preparación de datos
+
+Usar el DataFrame limpio del paso anterior.
+Codificar variables categóricas (ej: Yes/No a 1/0).
+Estandarizar columnas numéricas (tenure, Charges).
+
+Modelado
+
+Dividir datos en entrenamiento y prueba.
+Entrenar modelos: Logistic Regression y Random Forest.
+Evaluar con métricas como Accuracy, Precision, Recall, F1 y ROC-AUC.
+
+Análisis de variables
+
+Calcular la importancia de las features con Random Forest.
+Visualizar correlaciones con gráficos.
+
+Conclusión
+
+Resumir factores de churn y dar recomendaciones.
+
+📈 Principales insights (preliminares)
+
+Clientes con baja tenencia y altos cargos mensuales tienden a churnear.
+Contratos de mes a mes aumentan la evasión.
+Modelos predicen churn con buen rendimiento (Accuracy ~80%).
+
+🛠 Tecnologías usadas
+
+Python 3
+Pandas (manejo de datos)
+Scikit-learn (modelos y métricas)
+Matplotlib (gráficos)
+Seaborn (visualizaciones, opcional)
+
+▶️ Cómo ejecutar el notebook
+
+Abre Google Colab o tu entorno Jupyter.
+Sube el archivo TelecomX_LATAM.ipynb (o TelecomX_ML.ipynb si lo separaste).
+Sube también TelecomX_Data.json y TelecomX_diccionario.md.
+Instala las dependencias si no las tienes:pip install pandas scikit-learn matplotlib seaborn
 
 
-Un entorno como Jupyter Notebook o similar para ejecutar el código.
-
-Instala las dependencias con:
-pip install pandas scikit-learn matplotlib seaborn
-
-Instrucciones de Uso
-
-Clona el repositorio:git clone https://github.com/tu-usuario/TelecomX_ML_Churn.git
-
-
-Navega al directorio del proyecto:cd TelecomX_ML_Churn
-
-
-Asegúrate de tener el archivo TelecomX_Data.json en el directorio raíz (proporcionado previamente).
-Abre el notebook principal (TelecomX_LATAM.ipynb o crea uno nuevo) en Jupyter Notebook.
 Ejecuta las celdas en orden para:
-Cargar y preparar los datos.
-Dividir en entrenamiento y prueba.
-Entrenar los modelos.
-Evaluar el rendimiento.
-Visualizar resultados y obtener la conclusión.
+Cargar datos.
+Entrenar y evaluar modelos.
+Ver gráficos y conclusiones.
 
 
 
-Estructura del Repositorio
-
-TelecomX_Data.json: Dataset original con información de clientes.
-TelecomX_LATAM.ipynb: Notebook con el análisis completo (ETL, modelado, visualización).
-README.md: Este archivo con instrucciones y descripción.
-(Opcional) TelecomX_diccionario.md: Diccionario de datos para referencia.
-
-Resultados
-
-Modelos evaluados: Logistic Regression (Accuracy: 0.8157, Recall: 0.5430) y Random Forest (Accuracy: 0.7937, Recall: 0.4919).
-Factores clave de churn: Altos cargos totales/mensuales, baja tenencia, contratos de mes a mes.
-Recomendaciones: Incentivar contratos largos, descuentos para nuevos clientes, mejorar experiencia con fibra óptica.
-
-Contribuciones
-Si deseas contribuir, por favor:
-
-Haz un fork del repositorio.
-Crea una rama para tus cambios (git checkout -b feature/nueva-caracteristica).
-Haz commit de tus cambios (git commit -m "Descripción del cambio").
-Envía un pull request con una descripción clara.
-
-Licencia
-Este proyecto está bajo la Licencia MIT (o define la tuya si aplica).
-Contacto
-Para preguntas o sugerencias, contacta a [tu-nombre] en [tu-email] o abre un issue en este repositorio.
+👨‍💻 AutorDesarrollado por Jimmy Vasquez como parte del desafío de Machine Learning en Alura ONE. GitHub: jfvmgit / jimTelecomX2.
